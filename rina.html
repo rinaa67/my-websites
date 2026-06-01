@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sabrin beautiful salon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container-unique">
+        <div class="header-section">
+            <h1>online book store</h1>
+        </div>
+
+        <div class="content-wrapper-flex">
+            <nav class="sidebar-nav">
+                <button class="menu-btn active" onclick="showInfo(event, 'Home')">🏠 Home</button>
+                <button class="menu-btn" onclick="showInfo(event, 'About')">ℹ️ About</button>
+                <button class="menu-btn" onclick="showInfo(event, 'News')">📰 News</button>
+                <button class="menu-btn" onclick="showInfo(event, 'Contact')">📞 Contact Us</button>
+            </nav>
+
+            <div class="info-display-area">
+                
+                <div id="Home" class="info-tab show">
+                    <h2>home</h2>
+                    <p>Ku soo dhawaada maktabadda rina_ goobta aad ka heleyso buug kasta.</p>
+                </div>
+
+                <div id="About" class="info-tab">
+                    <h2>waxaa naga helee</h2>
+                    <p>liiska buugaagta ugu cusub ee hadda soo baxay.</p>
+                </div>
+
+                <div id="News" class="info-tab">
+                    <h2>Wararkii Ugu Dambeeyay</h2>
+                    <p>waxaan hadda ku jirnaa 50% discount,Buy one get one free.</p>
+                </div>
+
+                <div id="Contact" class="info-tab">
+                    <h2>Contact Us</h2>
+                    <div class="contact-box">
+                        <p> Email: @sabrina.store</p>
+                        <p> Phone: +252 61 6450406</p>
+                        <p> Address:muqdisho, dayniile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bar">
+            <p>All Copyright waxaa diyaariyay Sabrin Abdirizak</p>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(evt, sectionName) {
+            var i, infoTab, menuBtn;
+            infoTab = document.getElementsByClassName("info-tab");
+            for (i = 0; i < infoTab.length; i++) {
+                infoTab[i].classList.remove("show");
+            }
+            menuBtn = document.getElementsByClassName("menu-btn");
+            for (i = 0; i < menuBtn.length; i++) {
+                menuBtn[i].className = menuBtn[i].className.replace(" active", "");
+            }
+            document.getElementById(sectionName).classList.add("show");
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>.
+</body>
+</html>
